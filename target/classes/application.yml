@@ -1,0 +1,48 @@
+my:
+  custom:
+    property: Hello from aplication properties
+server:
+  port: 8080
+spring:
+  main:
+    banner-mode: off
+
+---
+spring:
+  config:
+    activate:
+      on-profile: jaz
+my:
+  custom:
+    property: Hello from application properties JAZ
+someValue: false
+---
+spring:
+  config:
+    activate:
+      on-profile: some-name
+  main:
+    banner-mode: console
+my:
+  custom:
+    property: Hello from application properties SOME-NAME
+
+---
+spring:
+  config:
+    activate:
+      on-profile: true
+my:
+  custom:
+    property: Hi, I think I'm true
+someValue: true
+
+#---
+#spring:
+#  config:
+#    activate:
+#      on-profile: false
+#my:
+#  custom:
+#    property: You think I'm false? I'm here!
+#variable: false
